@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>My Mirador Viewer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Container element of Mirador whose id should be passed to the instantiating call as "id" -->
+  <div id="my-mirador"></div>
+  <script type="text/javascript">
+    var mirador = Mirador.viewer({
+      "id": "my-mirador",
+      "manifests": {
+        "https://media.getty.edu/iiif/manifest/bc09b2d2-7805-428d-8e93-b8c05ab2aff3": {
+          "provider": "Sourced from The Getty"
+        }
+      },
+      "windows": [
+        {
+          "loadedManifest": "https://media.getty.edu/iiif/manifest/bc09b2d2-7805-428d-8e93-b8c05ab2aff3",
+          "canvasIndex": 2,
+          "thumbnailNavigationPosition": 'far-bottom',
+        }
+      ]
+    });
+  </script>
+</body>
+
+</html>
